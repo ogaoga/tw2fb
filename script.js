@@ -22,6 +22,14 @@ if (Meteor.isClient) {
           //console.log(this.result);
           var data = {'statuses': JSON.parse(this.result)};
           console.log(data);
+
+/*
+          for ( var i = 0 ; i < data.length ; i++ ) {
+            data[i].text = twttr.txt.autoLink(data[i].text);
+          }
+          console.log(data);
+*/
+
           var str = Template.timeline(data);
           $('#timeline').html(str);
         }
