@@ -1,6 +1,60 @@
 /* CSS declarations go here */
 
+body { 
+  background: #D8DCE6;
+  padding: 0 10px;
+}
+
+a { 
+  color: #576B95;
+}
+
 #receiver {
   height: 80px;
   width: 80px;
+}
+
+#timeline { 
+  margin: 10px auto;
+}
+.statuses { 
+  margin: 0 auto;
+  li { 
+    background: white;
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px 0;
+  }
+}
+.user { 
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  .user-icon { 
+    -webkit-box-flex: 0;
+    padding: 0 7px 0 0;
+    img { 
+      height: 34px;
+      width:  34px;
+    }
+  }
+  .user-info { 
+    -webkit-box-flex: 1;
+    .name { 
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 17px;
+    }
+    .screen-name { 
+      font-size: 13px;
+      color: #bbb;
+    }
+    .created { 
+      color: #bbb;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
+.status { 
+  margin: 10px 0 0;
 }

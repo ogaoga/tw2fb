@@ -9,7 +9,6 @@ if (Meteor.isClient) {
     }
   });
 */
-
   $(document)
     .on('drop', '#receiver', function(e){
       e.stopPropagation();
@@ -19,16 +18,12 @@ if (Meteor.isClient) {
         var file = files[0];
         var reader = new FileReader();
         reader.onload = function(event) {
-          //console.log(this.result);
           var data = {'statuses': JSON.parse(this.result)};
-          console.log(data);
 
-/*
-          for ( var i = 0 ; i < data.length ; i++ ) {
-            data[i].text = twttr.txt.autoLink(data[i].text);
+          for ( var i = 0 ; i < data.statuses.length ; i++ ) {
+            var temp = twttr.txt.autoLink(data.statuses[i].text);
+            data.statuses[i].text = temp;
           }
-          console.log(data);
-*/
 
           var str = Template.timeline(data);
           $('#timeline').html(str);
