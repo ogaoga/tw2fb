@@ -37,7 +37,18 @@
       </div>
     </div>
     <div class="status">
-      <span>{{{text}}}</span>
+      <div>
+        <span>{{{text}}}</span>
+      </div>
+      {{#if coordinates}}
+        {{> map}}
+      {{/if}}
     </div>
   </li>
+</template>
+
+<template name="map">
+  <div class="map">
+    <img src="http://maps.google.com/maps/api/staticmap?sensor=false&size=280x80&zoom=13&center={{geo.lat}},{{geo.lng}}" />
+  </div>
 </template>
