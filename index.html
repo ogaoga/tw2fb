@@ -33,7 +33,7 @@
           <span class="name"><a href="https://twitter.com/{{user.screen_name}}">{{user.name}}</a></span>
           <span class="screen-name">@<a href="https://twitter.com/{{user.screen_name}}">{{user.screen_name}}</a></span>
         </div>
-        <div class="created">{{created_at}}</div>
+        <div><span class="created">{{created_at}}</span> <span class="source">via {{{source}}}</span></div>
       </div>
     </div>
     <div class="status">
@@ -49,6 +49,7 @@
 
 <template name="map">
   <div class="map">
+    <div class="point"></div>
     <img src="http://maps.google.com/maps/api/staticmap?sensor=false&size=390x80&zoom=13&center={{geo.lat}},{{geo.lng}}" />
   </div>
 </template>
